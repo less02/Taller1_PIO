@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Reservas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Gestión de Reservas de Sala de Reunión</h1>
+  </header>
+
+  <section class="content">
+    <div class="lista">
+      <h2>Lista de Salas</h2>
+      <ul id="salas-list"></ul>
+    </div>
+
+    <div class="lista">
+      <h2>Lista de Reservas</h2>
+      <ul id="reservas-list"></ul>
+    </div>
+
+    <div class="formularios">
+      <h3>Agregar Sala</h3>
+      <form id="add-sala-form">
+        <input type="text" id="sala-nombre" placeholder="Nombre de la sala" required>
+        <input type="number" id="sala-capacidad" placeholder="Capacidad" required>
+        <select id="sala-estado" required>
+          <option value="activo">Activo</option>
+          <option value="inactivo">Inactivo</option>
+        </select>
+        <button type="submit">Agregar Sala</button>
+      </form>
+
+      <h3>Agregar Reserva</h3>
+      <form id="add-reserva-form">
+        <input type="text" id="reservante-nombre" placeholder="Nombre del Reservante" required>
+        <input type="datetime-local" id="reserva-fecha-inicio" required>
+        <input type="datetime-local" id="reserva-fecha-fin" required>
+        <select id="reserva-sala-id" required></select>
+        <button type="submit">Agregar Reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
